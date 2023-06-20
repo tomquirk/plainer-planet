@@ -1,9 +1,9 @@
 {
-  "name": "Plain",
-  "description": "A plain template for Planet",
-  "author": "Planetable Team",
-  "authorWebsite": "https://planetable.xyz",
-  "version": "1.6.1",
+  "name": "plainer",
+  "description": "A plainer template for Planet",
+  "author": "aeolian",
+  "authorWebsite": "https://aeolian.eth.limo",
+  "version": "1.6.2",
   "idealItemsPerPage": 10,
-  "buildNumber": 99
+  "buildNumber": 100
 }

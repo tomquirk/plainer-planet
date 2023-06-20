@@ -1,6 +1,7 @@
 :root {
     --background-color: #fff;
-    --foreground-color: #000;
+    --foreground-color: #52525B;
+    --heading-color: #27272A;
     --link-color: #336bad;
     --foreground-secondary-color: #666;
 
@@ -15,7 +16,7 @@
     --border-color: #e2e2e2;
     --chevron-color: #333;
     --site-title-font-size: 2.5em;
-    --h1-font-size: 2em;
+    --h1-font-size: 48px;
     --item-gap: 30px;
     --inner-gap: 20px;
     --title-line-height: 1.2;
@@ -28,10 +29,11 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #1c1c1e;
-        --foreground-color: #fff;
+        --background-color: #18181B;
+        --foreground-color: #A1A1AA;
         --link-color: #6699ff;
         --foreground-secondary-color: #adadaf;
+        --heading-color: #F4F4F5;
 
         --nav-current-background-color: #0f0f0f;
         --nav-current-foreground-color: #f1f1f1;
@@ -59,7 +61,9 @@ body {
     background-color: var(--background-color);
     padding: 0;
     margin: 0;
-    font-family: "Helvetica Neue", "Arial", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
 }
 
 a:link, a:visited, a:active {
@@ -113,11 +117,19 @@ h1 {
     font-size: var(--h1-font-size);
     margin: 0 0 20px 0;
     line-height: var(--title-line-height);
+    letter-spacing: -1.2px;
 }
 
 h2 {
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 20px;
 }
 
 .content img {
@@ -250,11 +262,9 @@ hr {
     color: var(--foreground-color);
 }
 
-.site-title {
+h1.site-title {
     font-size: var(--site-title-font-size);
     line-height: var(--title-line-height);
-    font-weight: 600;
-    color: var(--foreground-color);
 }
 
 .site-about {
@@ -461,6 +471,10 @@ p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
     max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
 }
 
 ul {
